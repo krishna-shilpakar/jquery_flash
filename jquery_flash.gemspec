@@ -22,6 +22,6 @@ Gem::Specification.new do |s|
   
   s.add_dependency('rails',        '~> 3.0.0')
   s.add_dependency('cucumber',        '~> 0.9.4')
-  s.add_dependency('rspec',           '~> 2.0.1')
-  s.add_dependency('bundler',         '~> 1.0.2')
+  s.add_dependency('rspec',           '~> 2.1.0')
+  s.add_dependency('bundler',         '~> 1.0.7')
 end
