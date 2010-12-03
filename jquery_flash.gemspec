@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "jquery_flash"
   s.version     = JqueryFlash::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["krishna-shilpakar"]
+  s.email       = ["shilpakar.kris@gmail.com"]
+  s.homepage    = "http://rubygems.org/gems/jquery_flash"
+  s.summary     = %q{Jquery flash for rails}
+  s.description = %q{}
 
   s.rubyforge_project = "jquery_flash"
 
@@ -18,4 +18,10 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+  
+  
+  s.add_dependency('rails',        '~> 3.0.1')
+  s.add_dependency('cucumber',        '~> 0.9.4')
+  s.add_dependency('rspec',           '~> 2.0.1')
+  s.add_dependency('bundler',         '~> 1.0.2')
 end
