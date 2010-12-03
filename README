@@ -1,0 +1,5 @@
+Usage:
+	rails g jquery_flash
+
+In View
+	<%= jquery_flash_script(:stay => true) %>
