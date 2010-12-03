@@ -2,10 +2,11 @@ module JqueryFlash
   
     def jquery_flash(options={})
       output = ""
-      defaults = { :stay => true }.merge(options)
+      defaults = { :stay => true, :script_tag => true, :msg => '' }.merge(options)
       [:error, :warning, :info, :notice].each do |key|
-        if flash[key]
-          output << display_flash(key, flash[key], defaults)
+        msg = flash[key] || defaults[:msg]
+        if msg
+          output << display_flash(key, msg, defaults)
         end
       end
       output
@@ -18,6 +19,7 @@ module JqueryFlash
     end
   
       def jquery_flash_script(options={})
-        content_tag(:script, jquery_flash(options), nil, false)
+        return content_tag(:script, jquery_flash(options), nil, false) if options[:script_tag].present?
+        jquery_flash(options)
     end
 end
